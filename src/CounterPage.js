@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Wrapper, CounterText, Button, Label, Input } from "./Components";
 
 const getInitailCounter = () =>
@@ -10,6 +10,7 @@ export const CounterPage = () => {
   const [initialCounter, setInitialCounter] = useState(0);
   const [counter, setCounter] = useState(0);
   const [loading, setLoading] = useState(false);
+  const inputEl = useRef(null);
 
   useEffect(() => {
     setLoading(true);
